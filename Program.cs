@@ -40,8 +40,7 @@ public class Program
             }
         };
 
-        await client.LoginAsync(TokenType.Bot,
-            "MTExNDk1MTgyOTQxNjA1MDczOA.GtSurY.gWb4C65VgZDovK9SrREDXhrCKmqV7FMoB5JDk4");
+        await client.LoginAsync(TokenType.Bot, "<TOKEN>");
         await client.StartAsync();
         await Task.Delay(Timeout.Infinite);
     }
