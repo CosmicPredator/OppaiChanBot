@@ -1,6 +1,8 @@
 ﻿using Discord;
 using Discord.Interactions;
 using OppaiChanBot.Helpers;
+using OppaiChanBot.Services;
+using EmbedBuilder = OppaiChanBot.Services.EmbedBuilder;
 
 namespace OppaiChanBot;
 
@@ -31,16 +33,8 @@ public class Program
             Console.WriteLine(message.ToString());
             await Task.CompletedTask;
         };
-
-        client.MessageReceived += async message =>
-        {
-            if (!message.Author.IsBot)
-            {
-                await message.Channel.SendMessageAsync("Fuck You UwU...!");
-            }
-        };
-
-        await client.LoginAsync(TokenType.Bot, "<TOKEN>");
+        
+        await client.LoginAsync(TokenType.Bot, Environment.GetEnvironmentVariable("TOKEN"));
         await client.StartAsync();
         await Task.Delay(Timeout.Infinite);
     }
@@ -59,7 +53,10 @@ public class Program
             .AddSingleton<DiscordSocketClient>()
             .AddSingleton(x => 
                 new InteractionService(x.GetRequiredService<DiscordSocketClient>()))
-            .AddSingleton<InteractionHandler>();
+            .AddSingleton<InteractionHandler>()
+            .AddHttpClient()
+            .AddSingleton<IWaifuService, WaifuService>()
+            .AddSingleton<IEmbedBuilder, EmbedBuilder>();
 
         return collection.BuildServiceProvider();
     }

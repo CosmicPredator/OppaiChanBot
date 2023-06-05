@@ -26,3 +26,8 @@ B:\DotnetApps\OppaiChanBot\bin\Debug\net7.0\System.Interactive.Async.dll
 B:\DotnetApps\OppaiChanBot\bin\Debug\net7.0\System.Linq.Async.dll
 B:\DotnetApps\OppaiChanBot\bin\Debug\net7.0\System.Reactive.dll
 B:\DotnetApps\OppaiChanBot\obj\Debug\net7.0\OppaiChanBot.csproj.CopyComplete
+B:\DotnetApps\OppaiChanBot\bin\Debug\net7.0\Microsoft.Extensions.Http.dll
+B:\DotnetApps\OppaiChanBot\bin\Debug\net7.0\Microsoft.Extensions.Logging.dll
+B:\DotnetApps\OppaiChanBot\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+B:\DotnetApps\OppaiChanBot\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+B:\DotnetApps\OppaiChanBot\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
